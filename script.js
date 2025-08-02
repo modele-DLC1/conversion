@@ -14,9 +14,19 @@ function switchTab(tab) {
 // Interface Simple : Z → A et B
 function calculSimple() {
   const z = parseFloat(document.getElementById("z-simple").value) || 0;
-  document.getElementById("a-simple").textContent = (((299792.458*((z+1)*(z+1)-1)/((z+1)*(z+1)+1))*30856775814913711000)/71).toFixed(2);
-  document.getElementById("b-simple").textContent = (z + 5).toFixed(2);
+  const H = parseFloat(document.getElementById("expansion-simple").value) || 71;
+
+  const c = 299792.458;
+  const L = 30856775814913711000;
+
+  const num = c * (((z + 1) ** 2 - 1));
+  const den = ((z + 1) ** 2 + 1);
+
+  const result_km = ((num / den) * L / H)/(c * 31558150 ) ;
+
+  document.getElementById("a-simple").value = result_km.toExponential(6);
 }
+
 
 // Interface Avancée : calculs bidirectionnels
 // script.js
@@ -26,7 +36,7 @@ const c = 299792.458;
 const L = 30856775814913711000;
 const AS = 31558150;
 const lambRef = 6.5628e-7;
-const Vex = 71;
+let Vex = 71;
 const Tex = 71;
 
 const V2 = (4 / 3) * Math.PI * Math.pow(c / Tex, 3);
@@ -130,6 +140,10 @@ function calculerDepuis(typ, val) {
 	  Vrec = Ri * Vex / L;
 	  zexp = Vrec / c;
 	  z = Math.sqrt((1 + zexp) / (1 - zexp)) - 1;
+	  break;
+	case "expansion":
+	  Vex = val; // met à jour le taux d'expansion global
+	  // Repartir de z (si il existe) pour recalculer tout le reste
 	  break;
   }
 

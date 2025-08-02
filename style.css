@@ -105,3 +105,140 @@ p {
     margin-bottom: 0.2em;
   }
 }
+#avancee {
+  padding: 1.5em;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+#inputs-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+#inputs-table th,
+#inputs-table td {
+  border: 1px solid #ddd;
+  padding: 0.6em 1em;
+  text-align: left;
+}
+
+#inputs-table th {
+  background-color: #004466;
+  color: white;
+}
+
+.section-orange {
+  background-color: #f9b233;
+  font-weight: bold;
+}
+
+.section-yellow {
+  background-color: #f9f28b;
+  font-weight: bold;
+}
+
+.section-green {
+  background-color: #b7e4b6;
+}
+
+.section-green input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+#inputs-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+#inputs-table td {
+  border: 1px solid #ddd;
+  padding: 0.6em 1em;
+}
+
+.section-orange td {
+  background-color: #f9b233;
+  font-weight: bold;
+}
+
+.section-yellow td {
+  background-color: #fdf287;
+  font-weight: bold;
+}
+
+.section-green td {
+  background-color: #b7e4b6;
+}
+
+.section-green input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+#inputs-table input[readonly] {
+  background-color: transparent;
+  border: none;
+  font-style: italic;
+}
+
+.spacer td {
+  padding: 0.6em;
+  background-color: white;
+  border: none;
+}
+.section-green input,
+#inputs-table input:not([readonly]) {
+  background-color: white;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 4px 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#inputs-table input[readonly] {
+  background-color: transparent;
+  border: none;
+  font-style: italic;
+}
+#simple-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+#simple-table td {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+}
+
+#simple-table input {
+  width: 100%;
+  padding: 0.4em;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.section-yellow td {
+  background-color: #fdf287;
+  font-weight: bold;
+}
+
+.section-green td {
+  background-color: #b7e4b6;
+}
+
+.section-orange td {
+  background-color: #f9b233;
+  font-weight: bold;
+}
